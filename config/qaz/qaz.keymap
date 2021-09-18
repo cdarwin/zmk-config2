@@ -22,6 +22,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        bh: layer_taps 
+		{
+			compatible = "zmk,behavior-hold-tap";
+			label = "Layer-Tap";
+			#binding-cells = <2>;
+			tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+			bindings = <&mo>, <&kp>;
+        };
     };
 };
 
@@ -31,17 +40,17 @@
 
         default_layer {
             bindings = <
-    &kp Q       &kp W      &kp E      &kp R       &kp T &kp Y &kp U       &kp I       &kp O      &kp P
+    &bh 2 Q       &kp W      &kp E      &kp R       &kp T &kp Y &kp U       &kp I       &kp O      &bh 2 P
     &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G &kp H &hm LSHFT J &hm LGUI K &hm LALT L &hm LCTRL SEMI
     &kp Z       &kp X      &kp C      &kp V       &kp B &kp N &kp M       &kp COMMA  &kp DOT
-    &kp LSHFT   &kp LGUI   &trans     &trans      &lt NUM_SYM SPACE       &trans     &kp SQT    &kp FSLH
+    &kp LSHFT   &kp LGUI   &trans     &trans      &lt 1 SPACE       &trans     &kp SQT    &kp FSLH
             >;
         };
         num_sym {
             bindings = <
     &kp TAB       &kp N7      &kp N8      &kp N9       &kp SEMI  &kp SQT   &kp HOME       &kp PG_DN     &kp PG_UP   &kp RET
     &hm LCTRL ESC &hm LALT N4 &hm LGUI N5 &hm LSHFT N6 &kp MINUS &kp EQUAL &hm LSHFT LEFT &hm LGUI DOWN &hm LALT UP &hm LCTRL RIGHT
-    &kp DEL       &kp N1      &kp N2      &kp N3       &kp GRAVE &kp BSLH  &none       &none     &kp DOT
+    &kp N0        &kp N1      &kp N2      &kp N3       &kp GRAVE &kp BSLH  &none       &none     &kp DOT
     &bootloader &reset    &none         &trans        &trans             &trans     &trans    &trans
             >;
         };
@@ -51,7 +60,7 @@
     &bt BT_CLR &bt BT_NXT &bt BT_PRV &none       &none &none &none       &kp UP       &none     &kp BSPC
     &trans     &trans     &trans     &trans      &none &none &kp LEFT    &kp DOWN     &kp RIGHT &none
     &none                 &none      &none       &none &none &none       &none        &none     &none
-    &none      &none      &none         &trans        &trans             &kp RET      &trans    &kp FSLH
+    &bootloader &reset      &none         &trans        &trans             &kp RET      &trans    &kp FSLH
             >;
         };
     };
