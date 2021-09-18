@@ -8,10 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
-#define NUM_SYM 1
-#define NAV     2
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -46,21 +42,21 @@
     &none       &none      &none      &none       &lt 1 SPACE &none       &none      &none
             >;
         };
-        num_sym {
+        num_nav {
             bindings = <
-    &kp TAB       &kp N7      &kp N8      &kp N9       &kp SEMI  &kp SQT   &none          &none         &none   &kp RET
+    &kp TAB       &kp N7      &kp N8      &kp N9       &kp SEMI  &kp SQT   &none          &none         &none       &kp RET
     &hm LCTRL ESC &hm LALT N4 &hm LGUI N5 &hm LSHFT N6 &kp MINUS &kp EQUAL &hm LSHFT LEFT &hm LGUI DOWN &hm LALT UP &hm LCTRL RIGHT
-    &kp N0        &kp N1      &kp N2      &kp N3       &kp GRAVE &kp BSLH  &none          &none         &kp FSLH
+    &kp N0        &kp N1      &kp N2      &kp N3       &kp GRAVE &kp BSLH  &none          &kp DOT       &kp FSLH
     &none         &none       &none       &none        &none               &none          &none         &none
             >;
         };
 
-    nav {
+        sym {
             bindings = <
-    &bt BT_CLR   &bt BT_NXT    &bt BT_PRV    &none          &kp COLON &kp DQT   &kp HOME       &kp PG_DN     &kp PG_UP     &kp END
-    &hm LCTRL LT &hm LALT LBRC &hm LGUI LBKT &hm LSHFT LPAR &kp MINUS &kp EQUAL &hm LSHFT RPAR &hm LGUI RBKT &hm LALT LBRC &hm LCTRL GT
-    &none        &none         &none         &none          &kp TILDE &kp PIPE  &none          &none         &none 
-    &bootloader  &reset        &none         &none          &kp BSPC            &none          &none         &none
+    &bootloader  &kp C_VOL_DN  &kp K_MUTE    &kp C_VOL_UP   &kp COLON &kp DQT   &kp HOME       &kp PG_DN     &kp PG_UP     &kp END
+    &hm LCTRL LT &hm LALT LBRC &hm LGUI LBKT &hm LSHFT LPAR &kp MINUS &kp EQUAL &hm LSHFT RPAR &hm LGUI RBKT &hm LALT RBRC &hm LCTRL GT
+    &reset       &kp C_PREV    &kp C_PP      &kp C_NEXT     &kp TILDE &kp PIPE  &none          &none         &none 
+    &bt BT_PRV   &bt BT_CLR    &none         &none          &kp BSPC            &none          &bt BT_CLR    &bt BT_NXT
             >;
         };
     };
