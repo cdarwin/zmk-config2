@@ -57,10 +57,10 @@
 
     nav {
             bindings = <
-    &bt BT_CLR &bt BT_NXT &bt BT_PRV &none     &kp COLON &kp DQT  &kp HOME &kp PG_DN &kp PG_UP &kp END
-    &kp LT     &kp LBRC   &kp LBKT   &kp LPAR  &kp UNDER &kp PLUS &kp RPAR &kp RBKT  &kp LBRC  &kp GT
-    &none      &none      &none      &none     &kp TILDE &kp PIPE &none       &none  &none 
-    &bootloader &reset    &none      &none     &kp BSPC           &none       &none  &none
+    &bt BT_CLR   &bt BT_NXT    &bt BT_PRV    &none          &kp COLON &kp DQT   &kp HOME       &kp PG_DN     &kp PG_UP     &kp END
+    &hm LCTRL LT &hm LALT LBRC &hm LGUI LBKT &hm LSHFT LPAR &kp MINUS &kp EQUAL &hm LSHFT RPAR &hm LGUI RBKT &hm LALT LBRC &hm LCTRL GT
+    &none        &none         &none         &none          &kp TILDE &kp PIPE  &none          &none         &none 
+    &bootloader  &reset        &none         &none          &kp BSPC            &none          &none         &none
             >;
         };
     };
