@@ -131,37 +131,27 @@
 
     default_layer {
             bindings = <
-    &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
+    &bh 2 Q     &kp W      &kp E      &kp R       &kp T &kp Y &kp U       &kp I      &kp O      &bh 2 P
     &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G &kp H &hm LSHFT J &hm LGUI K &hm LALT L &hm LCTRL SEMI
-    &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH
-    &bh 3 TAB &bh 2 BSPC &bh 1 SPACE &bh 3 RET
+    &kp Z       &kp X      &kp C      &kp V       &kp B &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH
+    &bh 2 TAB &bh 1 BSPC &bh 1 SPACE &bh 2 RET
             >;
         };
-
-    num {
+    num_nav {
             bindings = <
-    &kp TAB &kp N7 &kp N8 &kp N9 &kp SEMI  &kp SQT   &none     &none    &none    &none
-    &gresc  &kp N4 &kp N5 &kp N6 &kp MINUS &kp EQUAL &kp LSHFT &kp LGUI &kp LALT &kp LCTRL
-    &kp DOT &kp N1 &kp N2 &kp N3 &kp GRAVE &kp BSLH  &none     &none    &none    &none
-    &none &kp N0 &none &none
-            >;
-        };
-
-    nav {
-            bindings = <
-    &none     &none    &none    &none     &kp SEMI  &kp SQT   &kp HOME &kp PG_DN &kp PG_UP &kp END
-    &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &kp MINUS &kp EQUAL &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
-    &none     &none    &none    &none     &kp GRAVE &kp BSLH  &none    &none     &none     &none
-    &bt BT_CLR &none &kp C_PREV &kp C_PP
+    &kp TAB       &kp N7      &kp N8      &kp N9       &kp SEMI  &kp SQT   &none          &none         &none       &kp RET
+    &hm LCTRL ESC &hm LALT N4 &hm LGUI N5 &hm LSHFT N6 &kp MINUS &kp EQUAL &hm LSHFT LEFT &hm LGUI DOWN &hm LALT UP &hm LCTRL RIGHT
+    &kp N0        &kp N1      &kp N2      &kp N3       &kp GRAVE &kp BSLH  &none          &none         &none       &none
+    &none &none &none &none
             >;
         };
 	
 	sym {
             bindings = <
-    &bt BT_SEL_CMD 0 &bt BT_SEL_CMD 1 &bt BT_SEL_CMD 2 &bt BT_SEL_CMD 3 &none &kp COLON &kp DQT  &kp LBRC &none &kp RBRC
-    &none            &none            &none            &none            &none &kp MINUS &kp PLUS &kp LPAR &none &kp RPAR
-    &none            &none            &none            &none            &none &kp TILDE &kp PIPE &kp LBKT &none &kp RBKT
-    &bt BT_CLR &trans &kp C_PREV &kp C_PP
+    &bootloader &kp C_VOL_DN &kp K_MUTE &kp C_VOL_UP &kp COLON &kp DQT  &kp HOME &kp PG_DN  &kp PG_UP &kp END
+    &kp LT      &kp LBRC     &kp LBKT   &kp LPAR     &kp UNDER &kp PLUS &kp RPAR &kp RBKT   &kp RBRC  &hm LCTRL GT
+    &reset      &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp TILDE &kp PIPE &none    &none      &none     &none
+    &bt BT_PRV &bt BT_CLR &kp BSPC &bt BT_NXT
             >;
         };
 
